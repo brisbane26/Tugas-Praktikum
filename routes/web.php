@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\MahasiswaController;
-
+use App\Http\Controllers\StaffController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +23,5 @@ Route::get('/', function () {
 });
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
 Route::get('/dosen', [DosenController::class, 'index']);
+Route::get('/staff', [StaffController::class, 'index']);
 

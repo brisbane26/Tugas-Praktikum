@@ -10,4 +10,6 @@ class Dosen extends Model
     use HasFactory;
     protected $table = 'dosen';
     protected $primaryKey = 'id_dosen';
+    protected $fillable = ['id_dosen', 'nip', 'nama_dosen', 'email_dosen', 'no_hp'];
+    public $timestamps = false;
 }

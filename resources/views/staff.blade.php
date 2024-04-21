@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('container')
-    <h1 class="text-center">Data Dosen</h1>
+    <h1 class="text-center">Data Staff</h1>
     <div class="mb-4">
     <button type="button" class="btn btn-success ">Tambah Data</button>
     </div>
@@ -9,21 +9,23 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">ID Dosen</th>
+                <th scope="col">ID Staff</th>
                 <th scope="col">NIP</th>
-                <th scope="col">Nama Dosen</th>
-                <th scope="col">Email Dosen</th>
+                <th scope="col">Email Staff</th>
+                <th scope="col">Nama Staff</th>
+                <th scope="col">Tanggal Lahir</th>
                 <th scope="col">No. HP</th>
               </tr>
             </thead>
             <tbody>
-              @foreach($dosen as $dsn)
+              @foreach($staff as $stf)
               <tr>
-                <th scope="row">{{$dsn->id_dosen}}</th>
-                <td>{{$dsn->nip}}</td>
-                <td>{{$dsn->nama_dosen}}</td>
-                <td>{{$dsn->email_dosen}}</td>
-                <td>{{$dsn->no_hp}}</td>
+                <th scope="row">{{$stf->id}}</th>
+                <td>{{$stf->nip}}</td>
+                <td>{{$stf->email}}</td>
+                <td>{{$stf->nama}}</td>
+                <td>{{$stf->tanggal_lahir}}</td>
+                <td>{{$stf->no_hp}}</td>
                 <td>
                     <button type="button" class="btn btn-primary">Update</button>
                     <button type="button" class="btn btn-danger">Hapus</button>
