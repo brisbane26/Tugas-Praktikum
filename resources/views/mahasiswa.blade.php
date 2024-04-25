@@ -13,7 +13,11 @@
                 <th scope="col">Nama</th>
                 <th scope="col">NIM</th>
                 <th scope="col">Jurusan</th>
+<<<<<<< HEAD
                 <th scope="col">Alamat</th>
+=======
+                <th scope="col">Nomor Identitas</th>
+>>>>>>> 9e3e4bfd7a844249923c63d582f0642125565225
                 <th scope="col">Aksi</th>
                 {{-- <th scope="col">Nomor Identitas</th> --}}
               </tr>
