@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\MahasiswaController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome',[
+        'isi_data' => 'Halaman Awal'
+    ]);
 });
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+Route::get('/dosen', [DosenController::class, '']);
+
