@@ -14,6 +14,7 @@
                 <th scope="col">Nama Dosen</th>
                 <th scope="col">Email Dosen</th>
                 <th scope="col">No. HP</th>
+                <th scope="col">Aksi</th>
               </tr>
             </thead>
             <tbody>

@@ -13,11 +13,7 @@
                 <th scope="col">Nama</th>
                 <th scope="col">NIM</th>
                 <th scope="col">Jurusan</th>
-<<<<<<< HEAD
                 <th scope="col">Alamat</th>
-=======
-                <th scope="col">Nomor Identitas</th>
->>>>>>> 9e3e4bfd7a844249923c63d582f0642125565225
                 <th scope="col">Aksi</th>
                 {{-- <th scope="col">Nomor Identitas</th> --}}
               </tr>
@@ -33,7 +29,12 @@
                 {{-- <td>{{$mhs->ktm->nomor_identitas}}</td> --}}
                 <td>
                     <a href="{{route('edit', $mhs->id_mahasiswa)}}"><button type="button" class="btn btn-primary">Update</button></a>
-                    <button type="button" class="btn btn-danger">Hapus</button>
+                    <form id="delete-form-{{$mhs->id_mahasiswa}}" action="{{ route('delete', $mhs->id_mahasiswa) }}" method="POST">
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</button>
+                    </form>
+
                 </td>
               </tr>
               @endforeach

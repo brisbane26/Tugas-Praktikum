@@ -71,26 +71,32 @@ class MahasiswaController extends Controller
      */
     public function update(Request $request, string $id_mahasiswa)
     {
-        $request->validate([
-            'nama'=>'required',
-            'nim'=>'required|unique:mahasiswa',
-            'jurusan'=>'required',
-            'alamat'=>'required'
-        ]);
+        // $request->validate([
+        //     'nama'=>'required',
+        //     'nim'=>'required|unique:mahasiswa',
+        //     'jurusan'=>'required',
+        //     'alamat'=>'required'
+        // ]);
         $mahasiswa = Mahasiswa::find($id_mahasiswa);
+
         $mahasiswa->nama = $request->nama;
         $mahasiswa->nim = $request->nim;
         $mahasiswa->jurusan = $request->jurusan;
         $mahasiswa->alamat = $request->alamat;
         $mahasiswa->save();
         return redirect()->route('index');
+
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id_mahasiswa)
     {
-        //
+    $mahasiswa = Mahasiswa::find($id_mahasiswa);
+    $mahasiswa->delete();
+    return redirect()->route('index');
+
     }
 }
