@@ -12,6 +12,9 @@
           <li class="nav-item">
             <a class="nav-link active" href="/dosen">Dosen</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/staff">Staff</a>
+          </li>
         </ul>
       </div>
     </div>

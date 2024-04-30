@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\MahasiswaController;
-
+use App\Http\Controllers\StaffController;
 use Illuminate\Support\Facades\Route;
 
 /*
